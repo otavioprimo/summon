@@ -1,9 +1,13 @@
 {
   "name": "summon",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "",
   "main": "./lib/index.js",
-  "keywords": [],
+  "keywords": [
+    "create",
+    "pages",
+    "helper"
+  ],
   "author": "Otávio Primo",
   "bin": {
     "summon": "./bin/create.js"

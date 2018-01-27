@@ -1,16 +1,24 @@
 #!/usr/bin/env node
-var myLibrary = require('../lib/index.js');
-
-// Delete the 0 and 1 argument (node and script.js)
+const myLibrary = require('../lib/index.js');
+const err_msg = require("../lib/messages/error");
+const init = require('./init');
+//Deleta os argumentos 0 e 1 (node e script.js)
 var args = process.argv.splice(process.execArgv.length + 2);
 
-// Retrieve the first argument
-var dir = args[0];
+//Recupera os argumentos passados pelo usuário
+var param1 = args[0];
 var template = args[1];
 if (template == undefined)
     template = '';
 
-if (!dir)
-    console.log('Need a path!\nExample: summon pages/dashboard/index.html basic');
-else
-    myLibrary.create(dir, template);
+//Verifica se o usuario digitou o path
+if (!param1) {
+    console.log(err_msg.invalidPath);
+    return;
+}
+
+if (param1 === 'init') {
+    init.createConfigFile();
+} else {
+    myLibrary.create(param1, template);
+}
