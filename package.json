@@ -1,0 +1,13 @@
+{
+  "name": "summon",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./lib/index.js",
+  "keywords": [],
+  "author": "Otávio Primo",
+  "bin": {
+    "summon": "./bin/create.js"
+  },
+  "preferGlobal": true,
+  "license": "ISC"
+}
