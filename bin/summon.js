@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const myLibrary = require('../lib/index.js');
 const err_msg = require("../lib/messages/error");
-const init = require('./init');
+
 //Deleta os argumentos 0 e 1 (node e script.js)
 var args = process.argv.splice(process.execArgv.length + 2);
 
@@ -18,7 +18,7 @@ if (!param1) {
 }
 
 if (param1 === 'init') {
-    init.createConfigFile();
+    myLibrary.createConfigJson();
 } else {
     myLibrary.create(param1, template);
 }

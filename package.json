@@ -10,7 +10,7 @@
   ],
   "author": "Otávio Primo",
   "bin": {
-    "summon": "./bin/create.js"
+    "summon": "./bin/summon.js"
   },
   "preferGlobal": true,
   "license": "ISC"
